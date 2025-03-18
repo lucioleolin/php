@@ -1,0 +1,49 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Registration Successful!</title>
+    <style>
+        body {
+            background-color: #E4FFD1;
+            color: #363636;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .output-container {
+            background-color: white;
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+        .output {
+            font-size: 18px;
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registration Successful!</h1>
+    <p>Your registration for the <b>NUK-IM 2025 Welcome Party</b> is confirmed!</p>
+    <p>Please check the details below:</p>
+
+    <div class="output-container">
+        <?php
+            $uName = $_GET["uName"];
+            $uId = $_GET["uId"];
+            $uPhone = $_GET["uPhone"];
+            $uBirth = $_GET["uBirth"];
+
+            echo "<p class='output'>Your Name: $uName</p>";
+            echo "<p class='output'>Student ID: $uId</p>";
+            echo "<p class='output'>Phone Number: $uPhone</p>";
+            echo "<p class='output'>Date of Birth: $uBirth</p>";
+        ?>
+    </div>
+
+    <br>
+    <p><b>Thank you for registering! We look forward to seeing you at the event.</b></p>
+</body>
+</html>
